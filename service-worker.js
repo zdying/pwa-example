@@ -2,8 +2,7 @@
  * 这个缓存的名称要注意，要有唯一的前缀，否则删除的时候
  * 可能把同域名下其他项目的cache删除
  */
-var CONTENT_CACHE_VERSION = 'content_v1.0.12';
-var API_CACHE_VERSION     = 'api_v1.0.12';
+var CONTENT_CACHE_VERSION = 'content_v1.0.2';
 
 importScripts('/pwa-example/src/scripts/log.js');
 
@@ -11,7 +10,7 @@ importScripts('/pwa-example/src/scripts/log.js');
  * service worker正在安装的时候，创建缓存
  */
 this.addEventListener('install', (eve) => {
-    log.info(`oninstall event: CONTENT_CACHE_VERSION=${CONTENT_CACHE_VERSION}, API_CACHE_VERSION=${API_CACHE_VERSION}`);
+    log.info(`oninstall event: CONTENT_CACHE_VERSION=${CONTENT_CACHE_VERSION}`);
 
     //确保Service Worker 不会在 waitUntil() 里面的代码执行完毕之前安装完成
     eve.waitUntil(
@@ -21,12 +20,8 @@ this.addEventListener('install', (eve) => {
             return cache.addAll(
                 // 想缓存的资源的列表
                 [
-                    '/pwa-example/src/index.html',
-                    '/pwa-example/source/github.gif',
-                    '/pwa-example/source/default.png',
-                    '/pwa-example/source/avatar.jpg',
-                    '/pwa-example/source/microsoft.png',
-                    '/pwa-example/source/departures.png',
+                    '/pwa-example/index.html',
+                    '/pwa-example/source/cnodejs.svg',
 
                     '/pwa-example/src/scripts/app.js',
                     '/pwa-example/src/styles/style.css',
@@ -47,7 +42,7 @@ this.addEventListener('activate', (eve) => {
     log.info(`onactivate event:`, eve);
 
     // 当前需要保留的缓存
-    let whiteList = [CONTENT_CACHE_VERSION, API_CACHE_VERSION];
+    let whiteList = [CONTENT_CACHE_VERSION];
 
     let deleteOtherCachePromise = caches.keys().then((cacheNames) => {
         log.info('当前缓存：' + cacheNames);
