@@ -3,7 +3,7 @@ progressive web app example
 
 # Screenshot
 
-<img src="screenshot/pwa-example.png" style="width: 320px; border: 1px solid lightgray;" />
+<img src="screenshot/pwa-example.png" width="320" />
 
 # Features
 
