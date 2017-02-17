@@ -2,7 +2,7 @@
  * 这个缓存的名称要注意，要有唯一的前缀，否则删除的时候
  * 可能把同域名下其他项目的cache删除
  */
-var CONTENT_CACHE_VERSION = 'content_v1.0.2';
+var CONTENT_CACHE_VERSION = 'content_v1.0.3';
 
 importScripts('/pwa-example/src/scripts/log.js');
 
@@ -128,7 +128,7 @@ this.addEventListener('fetch', (eve) => {
                 }else{
                     log.warn(`资源没有被缓存, url: ${url}, 请求并缓存`);
                     return fetch(req).then((res) => {
-                        if(!res || res.status >= 400 || res.type !== 'basic') {
+                        if(!res || res.status >= 400/* || res.type !== 'basic'*/) {
                             log.error("[fetch handler] etch error: " + (res && res.status))
                             return res;
                         }
