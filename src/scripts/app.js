@@ -29,7 +29,7 @@
 
         $.ajax({
             url: url,
-            data: {},
+            data: {limit: 10},
             success: (json, status, xhr) => {
                 if(json && json.success === true){
                     rendList(json.data)
