@@ -3,7 +3,8 @@ progressive web app example
 
 # Screenshot
 
-![screenshot](screenshot/pwa-example.png)
+<img src="screenshot/pwa-example.png" style="width: 320px; border: 1px solid lightgray;" />
+
 # Features
 
 - [x] service worker
