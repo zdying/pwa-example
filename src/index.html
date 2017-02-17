@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>pwa-exampleJS Topics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/pwa-example/src/styles/style.css" rel="stylesheet">
+        <link rel="manifest" href="manifest.json">
+        <!-- Add to home screen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Weather PWA">
+        <link rel="apple-touch-icon" href="/pwa-example/source/icons/homescreen192.png">
+
+        <!-- Windows tiles icon-->
+        <meta name="msapplication-TileImage" content="/pwa-example/source/icons/homescreen144.png">
+        <meta name="msapplication-TileColor" content="#2F3BA2">
+    </head>
+    <body>
+        <header>
+            <h1>pwa-exampleJS Topics</h1>
+        </header>
+        <main>
+            <div class="img-con">
+                <img src="../source/cnodejs.svg" alt="github">
+            </div>
+            
+            <div id="result">
+                <ul id="list" class="price-items">
+                </ul>
+            </div>
+        </main>
+        <!--<script src="./app.js"></script>-->
+        <script src="/pwa-example/src/lib/zepto.min.js"></script>
+        <!--<script src="/pwa-example/src/scripts/log.js"></script>-->
+        <script src="/pwa-example/src/scripts/app.js"></script>
+    </body>
+</html>
