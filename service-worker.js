@@ -134,7 +134,7 @@ this.addEventListener('fetch', (eve) => {
                         }
 
                         //TODO 这里需要看什么样的资源需要缓存
-                        return caches.ope(CONTENT_CACHE_VERSION).then((cache) => {
+                        return caches.open(CONTENT_CACHE_VERSION).then((cache) => {
                             log.info(`添加缓存: ${req.url}`);
                             cache.put(req, res.clone())
                             return res
