@@ -38,7 +38,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "/pwa/src/index.html?utm_source=web_app_manifest",
+    "start_url": "/pwa-example/index.html?utm_source=web_app_manifest",
     "display": "standalone",
     "orientation": "landscape",
     "background_color": "#29BDBB",
