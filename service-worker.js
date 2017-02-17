@@ -134,12 +134,12 @@ this.addEventListener('fetch', (eve) => {
                         }
 
                         //TODO 这里需要看什么样的资源需要缓存
-                        // return caches.opeCONTENT_CACHE_VERSION.then((cache) => {
-                        //     console.log('添加缓存...');
-                        //     cache.put(req, res.clone())
-                        //     return res
-                        // });
-                        return res
+                        return caches.ope(CONTENT_CACHE_VERSION).then((cache) => {
+                            log.info(`添加缓存: ${req.url}`);
+                            cache.put(req, res.clone())
+                            return res
+                        });
+                        // return res
                     })/*.catch((err) => {
                         console.log('资源请求失败，返回默认的图片');
                         return caches.match('/pwa/source/default.png')
