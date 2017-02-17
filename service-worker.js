@@ -2,7 +2,7 @@
  * 这个缓存的名称要注意，要有唯一的前缀，否则删除的时候
  * 可能把同域名下其他项目的cache删除
  */
-var CONTENT_CACHE_VERSION = 'content_v1.0.3';
+var CONTENT_CACHE_VERSION = 'content_v1.0.4';
 
 importScripts('/pwa-example/src/scripts/log.js');
 
